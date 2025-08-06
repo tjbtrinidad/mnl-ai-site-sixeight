@@ -1,98 +1,35 @@
 {
   "name": "mnl-ai-website",
   "version": "1.0.0",
-  "description": "MNL-AI - Transform Your Business Into a 24/7 Sales Machine. Premium AI automation solutions for Filipino entrepreneurs including chatbots, web design, and marketing automation.",
+  "description": "MNL-AI - AI-powered websites and automation for Filipino entrepreneurs",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
-    "build": "echo 'Static website - no build step required'",
-    "test": "echo 'No tests configured'",
-    "deploy": "echo 'Deploying to Railway...'",
-    "logs": "echo 'Check Railway dashboard for logs'"
+    "dev": "node server.js",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "keywords": [
     "ai",
+    "websites",
     "automation",
     "filipino",
-    "philippines",
-    "business",
-    "chatbot",
-    "web-design",
-    "marketing",
-    "entrepreneurship",
-    "sales-automation",
-    "mnl-ai",
-    "tj-trinidad",
-    "real-estate",
-    "financial-advisor",
-    "ecommerce"
+    "entrepreneurs",
+    "web-design"
   ],
-  "author": {
-    "name": "TJ Trinidad",
-    "email": "tj@mnl-ai.com",
-    "url": "https://mnl-ai.com"
-  },
+  "author": "Tristan Trinidad <tristan@mnl-ai.com>",
   "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mnl-ai/website.git"
   },
   "bugs": {
-    "url": "https://github.com/mnl-ai/website/issues",
-    "email": "hello@mnl-ai.com"
+    "url": "https://github.com/mnl-ai/website/issues"
   },
-  "homepage": "https://mnl-ai.com",
-  "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=7.0.0"
-  },
-  "dependencies": {
-    "express": "^4.18.2",
-    "compression": "^1.7.4",
-    "helmet": "^7.1.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.2"
-  },
-  "optionalDependencies": {
-    "@sendgrid/mail": "^7.7.0",
-    "nodemailer": "^6.9.7",
-    "mongoose": "^8.0.3"
-  },
-  "peerDependencies": {},
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ],
-  "config": {
-    "port": 8080
-  },
-  "private": false,
-  "funding": {
-    "type": "individual",
-    "url": "https://mnl-ai.com/support"
-  },
-  "contributors": [
-    {
-      "name": "TJ Trinidad",
-      "email": "tj@mnl-ai.com",
-      "role": "Founder & Lead Developer"
-    }
-  ],
-  "files": [
-    "index.html",
-    "style.css",
-    "script.js",
-    "server.js",
-    "package.json",
-    "railway.json",
-    "README.md"
-  ],
-  "type": "commonjs",
-  "publishConfig": {
-    "access": "public"
-  }
+  "homepage": "https://mnl-ai.com"
 }
