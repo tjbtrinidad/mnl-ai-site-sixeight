@@ -3,1421 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MNL-AI | Your 24/7 Sales Machine</title>
-    <meta name="description" content="MNL-AI helps Filipino entrepreneurs build AI-powered websites, chatbots, and smart automations that work while they sleep.">
+    <title>MNL-AI | Your Website. Upgraded by AI.</title>
+    <meta name="description" content="We build fast, modern websites for Filipino entrepreneurs — then automate what matters.">
     
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- CSS -->
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="scroll-progress"></div>
+    <div class="particles"></div>
+    <div class="cursor-gradient"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">MNL-AI</span>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#case-studies" class="nav-link">Case Studies</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link nav-cta">Get Started</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <a href="#" class="logo">MNL-AI</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="cta-btn">Book A Call</a></li>
+                <li><button class="theme-toggle" id="themeToggle">🌙</button></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">☰</button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <!-- Background Elements -->
-            <div class="hero-bg-elements">
-                <div class="gradient-orb orb-1"></div>
-                <div class="gradient-orb orb-2"></div>
-                <div class="gradient-orb orb-3"></div>
-                <div class="grid-pattern"></div>
-            </div>
-            
-            <!-- Hero Content -->
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-robot"></i>
-                    <span>Proudly Filipino AI Technology</span>
-                </div>
-                
-                <h1 class="hero-title">
-                    Not just a website —<br>
-                    your <span class="glow-text">24/7 sales machine</span>
-                </h1>
-                
-                <p class="hero-description">
-                    MNL-AI helps Filipino entrepreneurs build AI-powered websites, chatbots, 
-                    and smart automations that work while they sleep.
-                </p>
-                
-                <div class="hero-cta">
-                    <button class="btn-primary glow-btn" id="main-cta">
-                        <span>Let's Build Yours</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                    <button class="btn-secondary">
-                        <i class="fas fa-play"></i>
-                        <span>See How It Works</span>
-                    </button>
-                </div>
-                
-                <!-- Social Proof -->
-                <div class="hero-stats">
-                    <div class="stat-card">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Filipino Businesses</div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-card">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">AI Support</div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-card">
-                        <div class="stat-number">3x</div>
-                        <div class="stat-label">Revenue Growth</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hero Visual -->
-            <div class="hero-visual">
-                <div class="floating-element element-1">
-                    <div class="element-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <div class="element-content">
-                        <div class="element-title">AI Chatbot</div>
-                        <div class="element-subtitle">Responding 24/7...</div>
-                    </div>
-                </div>
-                
-                <div class="floating-element element-2">
-                    <div class="element-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="element-content">
-                        <div class="element-title">Sales Up</div>
-                        <div class="element-subtitle">+250% this month</div>
-                    </div>
-                </div>
-                
-                <div class="floating-element element-3">
-                    <div class="element-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="element-content">
-                        <div class="element-title">Auto Follow-up</div>
-                        <div class="element-subtitle">Never miss a lead</div>
-                    </div>
-                </div>
-                
-                <!-- Central Glowing Circle -->
-                <div class="hero-centerpiece">
-                    <div class="centerpiece-ring ring-1"></div>
-                    <div class="centerpiece-ring ring-2"></div>
-                    <div class="centerpiece-ring ring-3"></div>
-                    <div class="centerpiece-core">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="scroll-text">Scroll to explore</div>
-            <div class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
+    <section class="hero" id="home">
+        <div class="hero-content reveal-up">
+            <h1 class="shimmer">Your Website. Upgraded by AI.</h1>
+            <p class="typing-text">We build fast, modern websites for Filipino entrepreneurs — then automate what matters.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-btn magnetic">Book A Call</a>
+                <a href="#projects" class="btn-secondary magnetic">View Projects</a>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="services-container">
-            <!-- Section Header -->
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-cogs"></i>
-                    <span>Our AI Solutions</span>
-                </div>
-                <h2 class="section-title">
-                    Transform Your Business with 
-                    <span class="glow-text">Three Core Services</span>
-                </h2>
-                <p class="section-description">
-                    Everything Filipino entrepreneurs need to automate their success and scale without burnout
-                </p>
+    <!-- Stats Bar -->
+    <section class="stats section-bg-animated">
+        <div class="stats-container">
+            <div class="stat-item floating-element">
+                <h3 class="stat-counter" data-target="10">0</h3>
+                <p>Websites Launched</p>
             </div>
-
-            <!-- Services Grid -->
-            <div class="services-grid">
-                <!-- Service 1: AI Chatbots -->
-                <div class="service-card featured">
-                    <div class="service-badge">Most Popular</div>
-                    <div class="service-icon-container">
-                        <div class="service-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h3 class="service-title">AI-Powered Chatbots</h3>
-                    <p class="service-subtitle">Never miss a lead again</p>
-                    <p class="service-description">
-                        Smart chatbots that handle customer inquiries, qualify prospects, and book appointments 24/7 in Filipino and English.
-                    </p>
-                    
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Instant lead qualification</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Appointment scheduling</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Bilingual support (EN/TL)</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>CRM integration</span>
-                        </div>
-                    </div>
-                    
-                    <div class="service-stats">
-                        <div class="stat">
-                            <span class="stat-value">300%</span>
-                            <span class="stat-text">More Qualified Leads</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">24/7</span>
-                            <span class="stat-text">Always Available</span>
-                        </div>
-                    </div>
-                    
-                    <button class="service-cta">
-                        <span>Get Your Chatbot</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-
-                <!-- Service 2: Web Design -->
-                <div class="service-card">
-                    <div class="service-icon-container">
-                        <div class="service-icon">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h3 class="service-title">Modern Web Design</h3>
-                    <p class="service-subtitle">Professional presence that converts</p>
-                    <p class="service-description">
-                        Fast, mobile-optimized websites designed specifically for the Filipino market that turn visitors into customers.
-                    </p>
-                    
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Mobile-first responsive design</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>SEO optimized</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Fast loading speeds</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Conversion focused</span>
-                        </div>
-                    </div>
-                    
-                    <div class="service-stats">
-                        <div class="stat">
-                            <span class="stat-value">250%</span>
-                            <span class="stat-text">Higher Conversions</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">2s</span>
-                            <span class="stat-text">Load Time</span>
-                        </div>
-                    </div>
-                    
-                    <button class="service-cta">
-                        <span>Build My Website</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-
-                <!-- Service 3: Marketing Assets -->
-                <div class="service-card">
-                    <div class="service-icon-container">
-                        <div class="service-icon">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                        <div class="icon-glow"></div>
-                    </div>
-                    <h3 class="service-title">Marketing Automation</h3>
-                    <p class="service-subtitle">Content that works while you sleep</p>
-                    <p class="service-description">
-                        AI creates your social media posts, email campaigns, and marketing materials with consistent Filipino brand voice.
-                    </p>
-                    
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Social media content</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Email sequences</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Ad copy & creatives</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Brand consistency</span>
-                        </div>
-                    </div>
-                    
-                    <div class="service-stats">
-                        <div class="stat">
-                            <span class="stat-value">10x</span>
-                            <span class="stat-text">Faster Content</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">70%</span>
-                            <span class="stat-text">Time Saved</span>
-                        </div>
-                    </div>
-                    
-                    <button class="service-cta">
-                        <span>Automate Marketing</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
+            <div class="stat-item floating-element">
+                <h3 class="stat-counter" data-target="50">0</h3>
+                <p>Assets Created</p>
             </div>
-
-            <!-- All-in-One CTA -->
-            <div class="services-cta">
-                <div class="cta-content">
-                    <h3 class="cta-title">Want all three? Get the complete package.</h3>
-                    <p class="cta-description">Chatbot + Website + Marketing = Your complete 24/7 sales machine</p>
-                </div>
-                <button class="cta-button glow-btn">
-                    <span>Get Complete Package</span>
-                    <i class="fas fa-rocket"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section class="case-studies" id="case-studies">
-        <div class="case-studies-container">
-            <!-- Animated Background -->
-            <div class="case-studies-bg">
-                <div class="success-particles">
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                </div>
-                <div class="growth-lines">
-                    <div class="line line-1"></div>
-                    <div class="line line-2"></div>
-                    <div class="line line-3"></div>
-                </div>
-            </div>
-
-            <!-- Section Header -->
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-trophy"></i>
-                    <span>Proven Success Stories</span>
-                </div>
-                <h2 class="section-title">
-                    Real Filipino Businesses,
-                    <span class="glow-text">Real Results</span>
-                </h2>
-                <p class="section-description">
-                    See how our AI solutions transformed these Filipino entrepreneurs from overwhelmed to automated success
-                </p>
-            </div>
-
-            <!-- Case Studies Grid -->
-            <div class="case-studies-grid">
-                
-                <!-- Case Study 1: Real Estate -->
-                <div class="case-study-card featured" data-industry="real-estate">
-                    <div class="case-study-badge">
-                        <i class="fas fa-fire"></i>
-                        <span>ChatPilot 24/7</span>
-                    </div>
-                    
-                    <div class="case-study-header">
-                        <div class="industry-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <div class="case-info">
-                            <h3 class="case-title">Manila Realty Breakthrough</h3>
-                            <p class="case-client">Premium Real Estate Agency</p>
-                            <div class="case-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Makati, Metro Manila</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="case-challenge">
-                        <h4 class="challenge-title">The Challenge</h4>
-                        <p>"We were losing 60% of leads because we couldn't respond fast enough. Clients expected instant replies, especially on weekends."</p>
-                    </div>
-
-                    <div class="case-solution">
-                        <h4 class="solution-title">MNL-AI Solution</h4>
-                        <div class="solution-features">
-                            <span class="feature-tag">AI Chatbot</span>
-                            <span class="feature-tag">Lead Qualification</span>
-                            <span class="feature-tag">Appointment Booking</span>
-                        </div>
-                    </div>
-
-                    <div class="case-results">
-                        <h4 class="results-title">Explosive Results</h4>
-                        <div class="results-grid">
-                            <div class="result-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-users"></i>
-                                </div>
-                                <div class="metric-data">
-                                    <span class="metric-value">300%</span>
-                                    <span class="metric-label">More Qualified Leads</span>
-                                </div>
-                            </div>
-                            <div class="result-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-peso-sign"></i>
-                                </div>
-                                <div class="metric-data">
-                                    <span class="metric-value">₱2M</span>
-                                    <span class="metric-label">Monthly Revenue Jump</span>
-                                </div>
-                            </div>
-                            <div class="result-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="metric-data">
-                                    <span class="metric-value">24/7</span>
-                                    <span class="metric-label">Lead Response Time</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="case-testimonial">
-                        <div class="testimonial-content">
-                            <i class="fas fa-quote-left quote-icon"></i>
-                            <p>"MNL-AI didn't just give us a chatbot—they gave us our weekends back. Our AI handles everything while we sleep!"</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user-tie"></i>
-                            </div>
-                            <div class="author-info">
-                                <span class="author-name">Maria Santos</span>
-                                <span class="author-title">Senior Partner</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="case-timeline">
-                        <div class="timeline-item">
-                            <span class="timeline-period">Week 1</span>
-                            <span class="timeline-result">Chatbot deployed</span>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="timeline-period">Month 1</span>
-                            <span class="timeline-result">150% lead increase</span>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="timeline-period">Month 3</span>
-                            <span class="timeline-result">₱2M revenue boost</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case Study 2: Financial Advisory -->
-                <div class="case-study-card" data-industry="financial">
-                    <div class="case-study-badge">
-                        <i class="fas fa-rocket"></i>
-                        <span>Growth Machine</span>
-                    </div>
-                    
-                    <div class="case-study-header">
-                        <div class="industry-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="case-info">
-                            <h3 class="case-title">Pinoy Wealth Explosion</h3>
-                            <p class="case-client">Financial Advisory Firm</p>
-                            <div class="case-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Ortigas, Pasig City</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="case-challenge">
-                        <h4 class="challenge-title">The Challenge</h4>
-                        <p>"Spending 40 hours/week on content creation. No time for actual client work. Social media was inconsistent."</p>
-                    </div>
-
-                    <div class="case-solution">
-                        <h4 class="solution-title">MNL-AI Solution</h4>
-                        <div class="solution-features">
-                            <span class="feature-tag">Marketing Automation</span>
-                            <span class="feature-tag">Content Generation</span>
-                            <span class="feature-tag">Email Sequences</span>
-                        </div>
-                    </div>
-
-                    <div class="case-results">
-                        <h4 class="results-title">Incredible Growth</h4>
-                        <div class="results-grid">
-                            <div class="result-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-user-plus"></i>
-                                </div>
-                                <div class="metric-data">
-                                    <span class="metric-value">250%</span>
-                                    <span class="metric-label">Client Growth</span>
-                                </div>
-                            </div>
-                            <div class="result-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-calendar-alt"></i>
-                                </div>
-                                <div class="metric-data">
-                                    <span class="metric-value">6</span>
-                                    <span class="metric-label">Months to Success</span>
-                                </div>
-                            </div>
-                            <div class="result-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-hourglass-half"></i>
-                                </div>
-                                <div class="metric-data">
-                                    <span class="metric-value">75%</span>
-                                    <span class="metric-label">Time Saved</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="case-testimonial">
-                        <div class="testimonial-content">
-                            <i class="fas fa-quote-left quote-icon"></i>
-                            <p>"I went from content slave to business owner. AI creates everything—I just focus on helping clients grow wealth!"</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user-graduate"></i>
-                            </div>
-                            <div class="author-info">
-                                <span class="author-name">Carlos Reyes</span>
-                                <span class="author-title">Senior Financial Advisor</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Case Study 3: E-commerce -->
-                <div class="case-study-card" data-industry="ecommerce">
-                    <div class="case-study-badge">
-                        <i class="fas fa-crown"></i>
-                        <span>Scale Master</span>
-                    </div>
-                    
-                    <div class="case-study-header">
-                        <div class="industry-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="case-info">
-                            <h3 class="case-title">TikTok Shop Empire</h3>
-                            <p class="case-client">Online Fashion Retailer</p>
-                            <div class="case-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Quezon City, Metro Manila</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="case-challenge">
-                        <h4 class="challenge-title">The Challenge</h4>
-                        <p>"Working 80 hours/week handling customer service. Couldn't scale beyond ₱50K monthly—hit a wall."</p>
-                    </div>
-
-                    <div class="case-solution">
-                        <h4 class="solution-title">MNL-AI Solution</h4>
-                        <div class="solution-features">
-                            <span class="feature-tag">Customer Service Bot</span>
-                            <span class="feature-tag">Order Management</span>
-                            <span class="feature-tag">Modern Website</span>
-                        </div>
-                    </div>
-
-                    <div class="case-results">
-                        <h4 class="results-title">Mind-Blowing Scale</h4>
-                        <div class="results-grid">
-                            <div class="result-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-chart-bar"></i>
-                                </div>
-                                <div class="metric-data">
-                                    <span class="metric-value">10x</span>
-                                    <span class="metric-label">Revenue Growth</span>
-                                </div>
-                            </div>
-                            <div class="result-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-peso-sign"></i>
-                                </div>
-                                <div class="metric-data">
-                                    <span class="metric-value">₱500K</span>
-                                    <span class="metric-label">Monthly Revenue</span>
-                                </div>
-                            </div>
-                            <div class="result-metric">
-                                <div class="metric-icon">
-                                    <i class="fas fa-bed"></i>
-                                </div>
-                                <div class="metric-data">
-                                    <span class="metric-value">70%</span>
-                                    <span class="metric-label">Less Work Hours</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="case-testimonial">
-                        <div class="testimonial-content">
-                            <i class="fas fa-quote-left quote-icon"></i>
-                            <p>"From ₱50K to ₱500K monthly! I sleep 8 hours now while my AI handles everything. Best investment EVER!"</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user-crown"></i>
-                            </div>
-                            <div class="author-info">
-                                <span class="author-name">Jessica Cruz</span>
-                                <span class="author-title">E-commerce Entrepreneur</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Success Stats Bar -->
-            <div class="success-stats-bar">
-                <div class="stats-content">
-                    <div class="stats-header">
-                        <h3>Combined Client Results</h3>
-                        <p>Across all industries we serve</p>
-                    </div>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <div class="stat-data">
-                                <span class="stat-number">500+</span>
-                                <span class="stat-label">Filipino Businesses Automated</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-peso-sign"></i>
-                            </div>
-                            <div class="stat-data">
-                                <span class="stat-number">₱50M+</span>
-                                <span class="stat-label">Additional Revenue Generated</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="stat-data">
-                                <span class="stat-number">10K+</span>
-                                <span class="stat-label">Hours Saved Monthly</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="stat-data">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">Client Satisfaction Rate</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Interactive CTA -->
-            <div class="case-studies-cta">
-                <div class="cta-visual">
-                    <div class="success-badge">
-                        <i class="fas fa-trophy"></i>
-                        <span>Your Success Story Starts Here</span>
-                    </div>
-                </div>
-                <div class="cta-content">
-                    <h3 class="cta-title">Ready to Be Our Next Success Story?</h3>
-                    <p class="cta-description">
-                        Join 500+ Filipino entrepreneurs who've transformed their businesses with MNL-AI. 
-                        Your breakthrough is just one conversation away.
-                    </p>
-                    <div class="cta-buttons">
-                        <button class="btn-primary success-cta glow-btn">
-                            <span>Start My Success Story</span>
-                            <i class="fas fa-rocket"></i>
-                        </button>
-                        <button class="btn-secondary case-study-btn">
-                            <i class="fas fa-file-alt"></i>
-                            <span>Download Full Case Studies</span>
-                        </button>
-                    </div>
-                </div>
+            <div class="stat-item floating-element">
+                <h3 class="stat-counter" data-target="98">0</h3>
+                <p>Uptime</p>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="about-container">
-            <!-- Animated Background -->
-            <div class="about-bg">
-                <div class="philippines-outline">
-                    <div class="pulse-dot manila"></div>
-                    <div class="pulse-dot cebu"></div>
-                    <div class="pulse-dot davao"></div>
+        <div class="container">
+            <h2 class="section-title fade-up">About Us</h2>
+            <div class="about-content">
+                <p class="fade-up">I'm <strong>Tristan Trinidad</strong>, a Filipino entrepreneur committed to helping local businesses grow using smart automation and modern web solutions. Over the years, I've worked with business owners across different industries, helping them streamline operations and build websites that actually support their goals.</p>
+                <p class="fade-up">My mission is to make advanced technology simple and accessible for Filipino entrepreneurs. Whether you're a coach, seller, or service provider, you deserve tools that work 24/7 without the high cost or steep learning curve.</p>
+                <p class="fade-up">At <strong>MNL-AI</strong>, we don't just build websites—we build systems that give you back your time and help you grow with confidence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools">
+        <div class="container">
+            <h2 class="section-title fade-up">Powerful Tools at Your Service</h2>
+            <p class="fade-up" style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;">These are the proven platforms we integrate to automate your workflows, boost your sales, and scale your business effortlessly.</p>
+            <div class="tools-grid">
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">🔄</div>
+                    <div class="tool-name">n8n</div>
                 </div>
-                <div class="floating-code">
-                    <div class="code-snippet code-1">
-                        <span class="code-comment">// Building the future</span>
-                        <span class="code-line">const filipinoSuccess = true;</span>
-                    </div>
-                    <div class="code-snippet code-2">
-                        <span class="code-comment">// AI + Heart = Magic</span>
-                        <span class="code-line">function transformBusiness() {</span>
-                        <span class="code-line">  return automation + passion;</span>
-                        <span class="code-line">}</span>
-                    </div>
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">📈</div>
+                    <div class="tool-name">GHL</div>
+                </div>
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">⚡</div>
+                    <div class="tool-name">Make.com</div>
+                </div>
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">🤖</div>
+                    <div class="tool-name">OpenAI</div>
+                </div>
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">🧠</div>
+                    <div class="tool-name">Claude</div>
+                </div>
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">💬</div>
+                    <div class="tool-name">ManyChat</div>
+                </div>
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">📢</div>
+                    <div class="tool-name">Slack</div>
+                </div>
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">📱</div>
+                    <div class="tool-name">Telegram</div>
+                </div>
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">✅</div>
+                    <div class="tool-name">ClickUp</div>
+                </div>
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">📋</div>
+                    <div class="tool-name">Asana</div>
+                </div>
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">🔗</div>
+                    <div class="tool-name">Zapier</div>
+                </div>
+                <div class="tool-item fade-up">
+                    <div class="tool-icon">💚</div>
+                    <div class="tool-name">WhatsApp</div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Section Header -->
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-heart"></i>
-                    <span>Our Story</span>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title fade-up">What We Do</h2>
+            <div class="services-grid">
+                <div class="service-card featured fade-up">
+                    <div class="service-icon">🚀</div>
+                    <h3>Website Building</h3>
+                    <p>Professional websites that convert visitors into customers, built with modern design and AI optimization.</p>
                 </div>
-                <h2 class="section-title">
-                    Built by Filipinos,
-                    <span class="glow-text">for Filipino Dreams</span>
-                </h2>
-                <p class="section-description">
-                    We understand what it's like to hustle 80 hours a week, dream of scaling, and worry about family time. That's why MNL-AI exists.
-                </p>
-            </div>
-
-            <!-- Main Content Grid -->
-            <div class="about-content-grid">
-                
-                <!-- Founder Story Card -->
-                <div class="founder-story-card">
-                    <div class="story-badge">
-                        <i class="fas fa-star"></i>
-                        <span>Founder's Journey</span>
-                    </div>
-                    
-                    <div class="founder-profile">
-                        <div class="founder-avatar">
-                            <div class="avatar-ring ring-1"></div>
-                            <div class="avatar-ring ring-2"></div>
-                            <div class="avatar-image">
-                                <i class="fas fa-user-astronaut"></i>
-                            </div>
-                            <div class="founder-status">
-                                <div class="status-dot"></div>
-                                <span>Building the Future</span>
-                            </div>
-                        </div>
-                        
-                        <div class="founder-info">
-                            <h3 class="founder-name">TJ Trinidad</h3>
-                            <p class="founder-title">Founder & Chief Automation Officer</p>
-                            <div class="founder-credentials">
-                                <span class="credential">🚀 Serial Entrepreneur</span>
-                                <span class="credential">🤖 AI Automation Expert</span>
-                                <span class="credential">🇵🇭 Proudly Filipino</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="founder-story">
-                        <div class="story-section">
-                            <h4 class="story-title">The Problem I Lived</h4>
-                            <p>"I watched my fellow Filipino entrepreneurs work 80+ hour weeks, missing family dinners, stressed about follow-ups, and stuck at the same revenue ceiling. I was one of them."</p>
-                        </div>
-                        
-                        <div class="story-section">
-                            <h4 class="story-title">The Lightbulb Moment</h4>
-                            <p>"What if AI could handle the repetitive stuff? What if Filipino business owners could focus on what they love while automation handled the rest? That's when MNL-AI was born."</p>
-                        </div>
-                        
-                        <div class="story-section">
-                            <h4 class="story-title">Our Mission Today</h4>
-                            <p class="mission-statement">"Transform every Filipino entrepreneur's business into a 24/7 sales machine so they can scale without sacrificing family time."</p>
-                        </div>
-                    </div>
-
-                    <div class="founder-quote">
-                        <div class="quote-icon">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="quote-text">"Every Filipino entrepreneur deserves to build an empire while still being present for their family. That's not a dream—it's what we make reality."</p>
-                        <div class="quote-signature">
-                            <span>— TJ Trinidad</span>
-                        </div>
-                    </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon">🤖</div>
+                    <h3>Chatbots</h3>
+                    <p>AI-powered customer service that works 24/7 to answer questions and capture leads.</p>
                 </div>
-
-                <!-- Company Values Grid -->
-                <div class="values-grid">
-                    <h3 class="values-title">What Drives Us</h3>
-                    
-                    <div class="value-card" data-value="filipino-first">
-                        <div class="value-icon">
-                            <i class="fas fa-flag"></i>
-                        </div>
-                        <div class="value-content">
-                            <h4 class="value-name">🇵🇭 Filipino-First</h4>
-                            <p class="value-description">We understand <strong>utang na loob</strong>, the hustle culture, and why Sundays are for family. Our solutions respect Filipino values.</p>
-                            <div class="value-highlight">Built with Filipino heart</div>
-                        </div>
-                    </div>
-
-                    <div class="value-card" data-value="results-obsessed">
-                        <div class="value-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="value-content">
-                            <h4 class="value-name">📈 Results-Obsessed</h4>
-                            <p class="value-description">We don't just build cool tech—we build <strong>revenue-generating machines</strong>. Every feature must directly impact your bottom line.</p>
-                            <div class="value-highlight">ROI or we don't ship it</div>
-                        </div>
-                    </div>
-
-                    <div class="value-card" data-value="partnership">
-                        <div class="value-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <div class="value-content">
-                            <h4 class="value-name">🤝 True Partnership</h4>
-                            <p class="value-description">We're not vendors—we're your <strong>technology partners</strong>. Your success is our success. Your growth is our mission.</p>
-                            <div class="value-highlight">In this together</div>
-                        </div>
-                    </div>
-
-                    <div class="value-card" data-value="innovation">
-                        <div class="value-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <div class="value-content">
-                            <h4 class="value-name">🚀 Innovation Edge</h4>
-                            <p class="value-description">We stay ahead of AI trends so you don't have to. You get cutting-edge automation that <strong>future-proofs your business</strong>.</p>
-                            <div class="value-highlight">Always ahead of the curve</div>
-                        </div>
-                    </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon">🎨</div>
+                    <h3>Marketing Assets</h3>
+                    <p>Social media graphics, logos, and branded content that makes your business stand out.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="service-icon">⚡</div>
+                    <h3>AI Workflow Integration</h3>
+                    <p>Automate repetitive tasks and streamline your business operations with smart AI solutions.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Company Stats -->
-            <div class="company-stats">
-                <div class="stats-header">
-                    <h3>MNL-AI by the Numbers</h3>
-                    <p>Our impact on the Filipino entrepreneurship ecosystem</p>
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title fade-up">Our Process</h2>
+            <div class="process-grid">
+                <div class="process-step fade-up">
+                    <div class="process-number">1</div>
+                    <h3>Plan</h3>
+                    <p>We audit your digital presence and goals, then create a custom strategy that fits your business needs perfectly.</p>
                 </div>
-                
-                <div class="stats-showcase">
-                    <div class="stat-card premium">
-                        <div class="stat-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <div class="stat-data">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Filipino Businesses Transformed</span>
-                            <span class="stat-sublabel">Across Real Estate, Finance & E-commerce</span>
-                        </div>
-                        <div class="stat-trend">
-                            <i class="fas fa-arrow-up"></i>
-                            <span>Growing daily</span>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-peso-sign"></i>
-                        </div>
-                        <div class="stat-data">
-                            <span class="stat-number">₱50M+</span>
-                            <span class="stat-label">Additional Revenue Generated</span>
-                            <span class="stat-sublabel">For our client partners</span>
-                        </div>
-                        <div class="stat-trend">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Accelerating</span>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="stat-data">
-                            <span class="stat-number">10K+</span>
-                            <span class="stat-label">Hours Saved Monthly</span>
-                            <span class="stat-sublabel">More time for what matters</span>
-                        </div>
-                        <div class="stat-trend">
-                            <i class="fas fa-family"></i>
-                            <span>Family time restored</span>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="stat-data">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Client Satisfaction Rate</span>
-                            <span class="stat-sublabel">Every client becomes a raving fan</span>
-                        </div>
-                        <div class="stat-trend">
-                            <i class="fas fa-star"></i>
-                            <span>Always improving</span>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="stat-data">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">AI Systems Running</span>
-                            <span class="stat-sublabel">Never sleep, always working</span>
-                        </div>
-                        <div class="stat-trend">
-                            <i class="fas fa-infinity"></i>
-                            <span>Unstoppable</span>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <div class="stat-data">
-                            <span class="stat-number">3x</span>
-                            <span class="stat-label">Average Revenue Growth</span>
-                            <span class="stat-sublabel">Within 6 months</span>
-                        </div>
-                        <div class="stat-trend">
-                            <i class="fas fa-fire"></i>
-                            <span>Explosive growth</span>
-                        </div>
-                    </div>
+                <div class="process-step fade-up">
+                    <div class="process-number">2</div>
+                    <h3>Build</h3>
+                    <p>We design and develop your website using the latest technologies, ensuring it's fast, beautiful, and effective.</p>
+                </div>
+                <div class="process-step fade-up">
+                    <div class="process-number">3</div>
+                    <h3>Launch</h3>
+                    <p>We deploy and optimize for results, then provide ongoing support to help your business grow online.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Trust & Credibility -->
-            <div class="trust-section">
-                <div class="trust-header">
-                    <h3>Why Filipino Entrepreneurs Trust MNL-AI</h3>
-                    <p>Built on transparency, delivered with excellence</p>
-                </div>
-                
-                <div class="trust-grid">
-                    <div class="trust-card">
-                        <div class="trust-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h4>100% Filipino-Owned</h4>
-                        <p>No foreign investors. No hidden agendas. Just Filipino entrepreneurs helping Filipino entrepreneurs succeed.</p>
-                    </div>
-
-                    <div class="trust-card">
-                        <div class="trust-icon">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h4>24/7 Support sa Tagalog</h4>
-                        <p>Mag-Tagalog tayo! Our support team understands your business culture and speaks your language—literally.</p>
-                    </div>
-
-                    <div class="trust-card">
-                        <div class="trust-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h4>No Long-Term Lock-ins</h4>
-                        <p>We earn your business every month. No contracts, no penalties. Stay because we deliver results, not because you're trapped.</p>
-                    </div>
-
-                    <div class="trust-card">
-                        <div class="trust-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <h4>Transparent Reporting</h4>
-                        <p>See exactly how your AI systems perform. Real metrics, real data, real results. No fluff, just facts.</p>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title fade-up">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-up">
+                    <div class="project-image">E-Commerce Store</div>
+                    <div class="project-content">
+                        <h3>Modern Online Shop</h3>
+                        <p>Complete e-commerce solution with AI-powered product recommendations and automated customer support.</p>
                     </div>
                 </div>
-            </div>
-
-            <!-- Vision Statement -->
-            <div class="vision-statement">
-                <div class="vision-content">
-                    <div class="vision-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3 class="vision-title">Our Vision for 2030</h3>
-                    <p class="vision-text">
-                        "To see 10,000 Filipino entrepreneurs running automated businesses that generate millions while they focus on family, creativity, and building the Philippines' digital economy."
-                    </p>
-                    <div class="vision-cta">
-                        <span class="vision-question">Ready to be part of this future?</span>
-                        <button class="vision-btn glow-btn">
-                            <span>Join the Movement</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
+                <div class="project-card fade-up">
+                    <div class="project-image">Landing Page</div>
+                    <div class="project-content">
+                        <h3>High-Converting Landing</h3>
+                        <p>Lead generation website with smart forms, A/B testing, and conversion optimization built-in.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="contact">
-        <div class="cta-container">
-            <!-- Animated Background -->
-            <div class="cta-bg">
-                <div class="success-beams">
-                    <div class="beam beam-1"></div>
-                    <div class="beam beam-2"></div>
-                    <div class="beam beam-3"></div>
-                    <div class="beam beam-4"></div>
-                </div>
-                <div class="floating-money">
-                    <div class="money-icon money-1">₱</div>
-                    <div class="money-icon money-2">₱</div>
-                    <div class="money-icon money-3">₱</div>
-                    <div class="money-icon money-4">₱</div>
-                </div>
-                <div class="automation-gears">
-                    <div class="gear gear-1"><i class="fas fa-cog"></i></div>
-                    <div class="gear gear-2"><i class="fas fa-cog"></i></div>
-                    <div class="gear gear-3"><i class="fas fa-cog"></i></div>
-                </div>
-            </div>
-
-            <!-- Urgency Banner -->
-            <div class="urgency-banner">
-                <div class="urgency-content">
-                    <div class="urgency-icon">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <div class="urgency-text">
-                        <span class="urgency-main">LIMITED SPOTS: Only 50 New Clients This Quarter</span>
-                        <span class="urgency-sub">Join 500+ Filipino entrepreneurs already scaling with AI</span>
-                    </div>
-                    <div class="urgency-counter">
-                        <div class="counter-item">
-                            <span class="counter-number" id="spots-left">47</span>
-                            <span class="counter-label">Spots Left</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Main CTA Content -->
-            <div class="cta-main-content">
-                <div class="cta-left">
-                    <div class="cta-badge">
-                        <i class="fas fa-rocket"></i>
-                        <span>Ready to Transform?</span>
-                    </div>
-                    
-                    <h2 class="cta-title">
-                        Stop Working 80-Hour Weeks.
-                        <span class="glow-text">Start Your AI Empire Today.</span>
-                    </h2>
-                    
-                    <p class="cta-description">
-                        Book a <strong>FREE 30-minute strategy call</strong> with TJ Trinidad and discover exactly how to turn your business into a 24/7 sales machine. No fluff, no sales pitch—just a clear roadmap to 3x your revenue while working half the hours.
-                    </p>
-
-                    <!-- Benefits List -->
-                    <div class="cta-benefits">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <div class="benefit-content">
-                                <h4>Custom AI Strategy Session</h4>
-                                <p>Personalized automation blueprint for YOUR specific business and industry</p>
-                            </div>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="benefit-content">
-                                <h4>Revenue Growth Analysis</h4>
-                                <p>See exactly how much MORE money you could make with proper automation</p>
-                            </div>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="benefit-content">
-                                <h4>Zero Risk, All Reward</h4>
-                                <p>100% FREE consultation. No obligation. Just pure value and actionable insights</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Social Proof -->
-                    <div class="social-proof">
-                        <div class="proof-avatars">
-                            <div class="avatar-stack">
-                                <div class="avatar"><i class="fas fa-user"></i></div>
-                                <div class="avatar"><i class="fas fa-user-tie"></i></div>
-                                <div class="avatar"><i class="fas fa-user-graduate"></i></div>
-                                <div class="avatar"><i class="fas fa-user-crown"></i></div>
-                                <div class="avatar-count">+496</div>
-                            </div>
-                        </div>
-                        <div class="proof-text">
-                            <span class="proof-number">500+ Filipino entrepreneurs</span>
-                            <span class="proof-action">already transformed their businesses</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="cta-form-container">
-                    <div class="form-header">
-                        <div class="form-badge">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>Book Your FREE Call</span>
-                        </div>
-                        <h3 class="form-title">Get Your Custom AI Strategy</h3>
-                        <p class="form-subtitle">Takes 2 minutes. Changes everything.</p>
-                    </div>
-
-                    <form class="contact-form" id="main-contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" placeholder="e.g. Juan" required>
-                                <div class="input-focus-line"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" placeholder="e.g. dela Cruz" required>
-                                <div class="input-focus-line"></div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" placeholder="e.g. juan@yourcompany.com" required>
-                            <div class="input-focus-line"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" placeholder="e.g. +63 912 345 6789" required>
-                            <div class="input-focus-line"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="businessType">Your Business Type *</label>
-                            <select id="businessType" name="businessType" required>
-                                <option value="">Select your industry</option>
-                                <option value="real-estate">🏠 Real Estate Agent/Broker</option>
-                                <option value="financial-advisor">📈 Financial Advisor/Planner</option>
-                                <option value="ecommerce">🛒 E-commerce/Online Seller</option>
-                                <option value="coaching">🎯 Coach/Consultant</option>
-                                <option value="restaurant">🍽️ Restaurant/Food Business</option>
-                                <option value="retail">🏪 Retail/Physical Store</option>
-                                <option value="services">🔧 Service-Based Business</option>
-                                <option value="other">🏢 Other Business Type</option>
-                            </select>
-                            <div class="input-focus-line"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="monthlyRevenue">Current Monthly Revenue *</label>
-                            <select id="monthlyRevenue" name="monthlyRevenue" required>
-                                <option value="">Select revenue range</option>
-                                <option value="0-50k">₱0 - ₱50K (Just starting)</option>
-                                <option value="50k-100k">₱50K - ₱100K (Growing)</option>
-                                <option value="100k-250k">₱100K - ₱250K (Established)</option>
-                                <option value="250k-500k">₱250K - ₱500K (Scaling)</option>
-                                <option value="500k-1m">₱500K - ₱1M (Serious business)</option>
-                                <option value="1m+">₱1M+ (Ready to dominate)</option>
-                            </select>
-                            <div class="input-focus-line"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="biggestChallenge">Your Biggest Challenge Right Now *</label>
-                            <textarea id="biggestChallenge" name="biggestChallenge" placeholder="e.g. I spend 60 hours/week on manual follow-ups and still lose leads..." rows="4" required></textarea>
-                            <div class="input-focus-line"></div>
-                        </div>
-
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-container">
-                                <input type="checkbox" id="urgentHelp" name="urgentHelp">
-                                <span class="checkmark"></span>
-                                <span class="checkbox-text">🔥 I need help URGENTLY (Priority booking)</span>
-                            </label>
-                        </div>
-
-                        <button type="submit" class="form-submit-btn glow-btn" id="submit-btn">
-                            <span class="btn-text">Book My FREE Strategy Call</span>
-                            <span class="btn-subtext">Usually ₱5,000 - FREE Today</span>
-                            <i class="fas fa-rocket"></i>
-                        </button>
-
-                        <div class="form-guarantee">
-                            <div class="guarantee-icon">
-                                <i class="fas fa-shield-check"></i>
-                            </div>
-                            <div class="guarantee-text">
-                                <strong>100% Free. No Strings Attached.</strong>
-                                <p>If you don't get at least 3 actionable ideas to grow your business, we'll send you ₱1,000 for wasting your time.</p>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Alternative Contact Methods -->
-                    <div class="alternative-contact">
-                        <div class="alt-divider">
-                            <span>Or contact us directly</span>
-                        </div>
-                        
-                        <div class="alt-methods">
-                            <a href="https://m.me/mnlai" class="alt-method messenger" target="_blank">
-                                <div class="alt-icon">
-                                    <i class="fab fa-facebook-messenger"></i>
-                                </div>
-                                <div class="alt-content">
-                                    <span class="alt-title">Messenger</span>
-                                    <span class="alt-subtitle">Instant response</span>
-                                </div>
-                            </a>
-
-                            <a href="https://wa.me/639123456789" class="alt-method whatsapp" target="_blank">
-                                <div class="alt-icon">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                                <div class="alt-content">
-                                    <span class="alt-title">WhatsApp</span>
-                                    <span class="alt-subtitle">Chat now</span>
-                                </div>
-                            </a>
-
-                            <a href="tel:+639123456789" class="alt-method phone">
-                                <div class="alt-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="alt-content">
-                                    <span class="alt-title">Call Direct</span>
-                                    <span class="alt-subtitle">+63 912 345 6789</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Trust Signals -->
-            <div class="trust-signals">
-                <div class="trust-item">
-                    <i class="fas fa-lock"></i>
-                    <span>Your info is 100% secure</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-clock"></i>
-                    <span>We respond within 30 minutes</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-users"></i>
-                    <span>500+ successful transformations</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-medal"></i>
-                    <span>100% satisfaction guarantee</span>
-                </div>
-            </div>
-
-            <!-- Final Urgency Push -->
-            <div class="final-urgency">
-                <div class="urgency-card">
-                    <div class="urgency-header">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <span>Don't Let This Moment Pass</span>
-                    </div>
-                    <p class="urgency-message">
-                        Right now, your competitors are working 80-hour weeks while you could be building a 24/7 sales machine. Every day you wait is money lost and time you'll never get back.
-                    </p>
-                    <div class="urgency-action">
-                        <span class="urgency-question">Ready to stop struggling and start scaling?</span>
-                        <button class="urgency-btn glow-btn" onclick="document.querySelector('#main-contact-form').scrollIntoView({behavior: 'smooth'})">
-                            <span>Yes, I'm Ready to Transform</span>
-                            <i class="fas fa-arrow-up"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="fade-up">Ready to upgrade your digital presence?</h2>
+            <p class="fade-up">Join successful Filipino entrepreneurs who chose MNL-AI to power their growth.</p>
+            <a href="#contact" class="cta-btn-white fade-up">Let's Start Building</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span class="logo-text">MNL-AI</span>
-                        <span class="logo-tagline">Your 24/7 Sales Machine</span>
-                    </div>
-                    <p class="footer-description">
-                        Transforming Filipino entrepreneurs from overwhelmed to automated. 
-                        Building the future of Philippine digital business, one AI solution at a time.
-                    </p>
-                    <div class="footer-social">
-                        <a href="#" class="social-link facebook" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-link instagram" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link linkedin" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="social-link youtube" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="social-link tiktok" aria-label="TikTok">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-title">Services</h4>
-                        <ul class="footer-list">
-                            <li><a href="#services">AI Chatbots</a></li>
-                            <li><a href="#services">Web Design</a></li>
-                            <li><a href="#services">Marketing Automation</a></li>
-                            <li><a href="#case-studies">Success Stories</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-title">Company</h4>
-                        <ul class="footer-list">
-                            <li><a href="#about">About MNL-AI</a></li>
-                            <li><a href="#about">Meet TJ Trinidad</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-title">Resources</h4>
-                        <ul class="footer-list">
-                            <li><a href="#">Free AI Guide</a></li>
-                            <li><a href="#">Business Calculator</a></li>
-                            <li><a href="#">Client Portal</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-title">Support</h4>
-                        <ul class="footer-list">
-                            <li><a href="mailto:hello@mnl-ai.com">hello@mnl-ai.com</a></li>
-                            <li><a href="tel:+639123456789">+63 912 345 6789</a></li>
-                            <li><a href="#">Help Center</a></li>
-                            <li><a href="#">24/7 AI Support</a></li>
-                        </ul>
-                    </div>
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Get In Touch</h3>
+                <p>Ready to transform your business with AI-powered solutions?</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📧</a>
+                    <a href="#" class="social-link">📱</a>
+                    <a href="#" class="social-link">💬</a>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <div class="footer-legal">
-                        <span>&copy; 2025 MNL-AI. All rights reserved.</span>
-                        <div class="legal-links">
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Terms of Service</a>
-                            <a href="#">Cookie Policy</a>
-                        </div>
+            <div class="footer-section">
+                <h3>Start Your Project</h3>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="footer-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Proudly built in Manila, Philippines 🇵🇭</span>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="cta-btn">Send Message</button>
+                </form>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MNL-AI. Your website — built to impress, powered to grow.</p>
         </div>
     </footer>
 
